@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "miniai"
+  site-url: "https://rana454.github.io/miniai"
+  description: "This is the copy of the fastai course deep learing from the foundation"
+  repo-branch: main
+  repo-url: "https://github.com/rana454/miniai"
