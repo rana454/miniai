@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "01_matmul.html",
+    "href": "01_matmul.html",
+    "title": "Matrix multiplication from the foundations",
+    "section": "",
+    "text": "python\nmatplotlib\npython standard library\n\n\nFill in a module description here\n\n\n\nfrom pathlib import Path\nimport pickle, gzip, math, os, time, shutil, matplotlib as mpl, matplotlib.pyplot as plt\n\n\nMNIST_URL='https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/data/mnist.pkl.gz?raw=true'\npath_data = Path('data')\npath_data.mkdir(exist_ok=True)\npath_gz = path_data/'mnist.pkl.gz'\n\n\nfrom urllib.request import urlretrieve\nif not path_gz.exists(): urlretrieve(MNIST_URL, path_gz)\n\n\n!ls -a data\n\n.            ..           mnist.pkl.gz\n\n\n\nwith gzip.open(path_gz, 'rb') as f:\n    ((x_train, y_train),(x_valid, y_valid),_) = pickle.load(f, encoding='latin1')\n\n\nlst = list(x_train[0])\nvals = lst[200:210]\nvals\n\n[0.0,\n 0.0,\n 0.0,\n 0.19140625,\n 0.9296875,\n 0.98828125,\n 0.98828125,\n 0.98828125,\n 0.98828125,\n 0.98828125]\n\n\n\ndef chunks(x, sz):\n    for i in range(0,len(x),sz):\n        yield x[i:i+sz]\n\n\nlist(chunks(vals,5))\n\n[[0.0, 0.0, 0.0, 0.19140625, 0.9296875],\n [0.98828125, 0.98828125, 0.98828125, 0.98828125, 0.98828125]]\n\n\n\nmpl.rcParams['image.cmap'] = 'gray'\nplt.imshow(list(chunks(lst,28)))\n\n&lt;matplotlib.image.AxesImage at 0x7fdae940d9f0&gt;\n\n\n\n\n\n\nfrom itertools import islice\n\n\nit = iter(vals)\nlist(islice(it, 5))\n\n[0.0, 0.0, 0.0, 0.19140625, 0.9296875]\n\n\n\nlist(islice(it,5))\n\n[0.98828125, 0.98828125, 0.98828125, 0.98828125, 0.98828125]\n\n\n\nlist(islice(it,5))\n\n[]\n\n\n\nit = iter(lst)\nimg = list(iter(lambda: list(islice(it,28)), []))\n\n\nplt.imshow(img)\n\n&lt;matplotlib.image.AxesImage at 0x7fdafa986fe0&gt;\n\n\n\n\n\n\nimport torch\nfrom torch import Tensor\n\n:"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "miniai",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "miniai",
+    "section": "Install",
+    "text": "Install\npip install miniai"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "miniai",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  }
+]
