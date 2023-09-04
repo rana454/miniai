@@ -12,4 +12,6 @@ d = { 'settings': { 'branch': 'main',
                                  'miniai.training.Dataset.__init__': ('minibatch_training.html#dataset.__init__', 'miniai/training.py'),
                                  'miniai.training.Dataset.__len__': ('minibatch_training.html#dataset.__len__', 'miniai/training.py'),
                                  'miniai.training.accuracy': ('minibatch_training.html#accuracy', 'miniai/training.py'),
+                                 'miniai.training.fit': ('minibatch_training.html#fit', 'miniai/training.py'),
+                                 'miniai.training.get_dls': ('minibatch_training.html#get_dls', 'miniai/training.py'),
                                  'miniai.training.report': ('minibatch_training.html#report', 'miniai/training.py')}}}
