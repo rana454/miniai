@@ -5,4 +5,11 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://rana454.github.io',
                 'git_url': 'https://github.com/rana454/miniai',
                 'lib_path': 'miniai'},
-  'syms': {'miniai.core': {'miniai.core.foo': ('core.html#foo', 'miniai/core.py')}}}
+  'syms': { 'miniai.core': {'miniai.core.foo': ('core.html#foo', 'miniai/core.py')},
+            'miniai.training': { 'miniai.training.Dataset': ('minibatch_training.html#dataset', 'miniai/training.py'),
+                                 'miniai.training.Dataset.__getitem__': ( 'minibatch_training.html#dataset.__getitem__',
+                                                                          'miniai/training.py'),
+                                 'miniai.training.Dataset.__init__': ('minibatch_training.html#dataset.__init__', 'miniai/training.py'),
+                                 'miniai.training.Dataset.__len__': ('minibatch_training.html#dataset.__len__', 'miniai/training.py'),
+                                 'miniai.training.accuracy': ('minibatch_training.html#accuracy', 'miniai/training.py'),
+                                 'miniai.training.report': ('minibatch_training.html#report', 'miniai/training.py')}}}
